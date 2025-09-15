@@ -1,0 +1,72 @@
+POST http://localhost:9080/register HTTP/1.1
+content-Type:  application/json
+
+{
+    "username": "@shivansh",
+    "password": "pass1234",
+    "email": "shivansh@gmail.com",
+    "name": "Shivansh"
+}
+
+
+###
+
+POST http://localhost:9080/login HTTP/1.1
+content-Type:  application/json
+
+{
+    "email": "shivansh@gmail.com",
+    "password": "pass1234"   
+}
+
+
+###
+
+GET http://localhost:9080/get_user_and_profile 
+content-Type:  application/json
+
+{
+      "token": "54863a8f62d6874babb36dd30ab9c01fb073c9248abee4478668be08fcb99910"
+}
+
+
+###
+
+
+POST http://localhost:9080/update_profile_data
+Content-Type: application/json
+
+{
+  "token": "54863a8f62d6874babb36dd30ab9c01fb073c9248abee4478668be08fcb99910",
+  "bio": "Software developer passionate about web technologies.",
+  "currentPost": "Senior Developer",
+  "pastWork": [
+    {
+      "company": "Tech Solutions",
+      "position": "Frontend Developer",
+      "years": 2
+    },
+    {
+      "company": "InnovateX",
+      "position": "Junior Developer",
+      "years": 1
+    }
+  ],
+  "education": [
+    {
+      "school": "Delhi University",
+      "degree": "B.Tech Computer Science",
+      "fieldOfStudy": "Computer Science"
+    },
+    {
+      "school": "Coursera",
+      "degree": "Certificate",
+      "fieldOfStudy": "Web Development"
+    }
+  ]
+}
+
+
+###
+
+GET http://localhost:9080/user/get_all_users 
